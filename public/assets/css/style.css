@@ -1,0 +1,84 @@
+@font-face {
+    font-family: "Saira Condensed";
+    src: url(/assets/font/SairaCondensed-Regular.ttf);
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+nav {
+    opacity: 0.85;
+}
+
+.bg-dark-grey {
+    background-color: rgb(66, 66, 66);
+}
+.btn-lang {
+    border-color: rgb(255, 255, 255);
+}
+.btn-lang:focus,
+.btn-lang:hover {
+    background-color: rgb(135, 178, 248);
+    color: rgb(0, 0, 0);
+}
+#lang-menu {
+    max-width: 100px !important;
+}
+.dropdown-menu {
+    min-width: 0;
+    max-width: 150px;
+}
+.log {
+    min-width: 100px;
+}
+.log:hover {
+    font-weight: bold;
+}
+
+.content {
+    margin-top: 70px;
+    font-family: "Saira Condensed", "sans-serif";
+}
+
+.footer {
+    font-family: "Saira Condensed", "sans-serif";
+    margin: 2px auto;
+}
+
+table {
+    margin: 10px auto;
+}
+.table-title {
+    padding: 10px 15px !important;
+    font-size: 2rem;
+    color: white !important;
+    background-color: rgb(23, 126, 243) !important;
+}
+.badge {
+    margin-left: 5px !important;
+}
+.link-new {
+    text-decoration: none;
+    color: #fff;
+}
+.link-new:hover {
+    text-decoration: none;
+    color: rgb(172, 240, 145);
+    font-weight: bold;
+}
+.input-form {
+    margin-bottom: 4px;
+    border-radius: 0;
+}
+.input-form:focus {
+    z-index: 99;
+}
+.bold-list {
+    font-weight: bold;
+}
+.avatar {
+    max-width: 50px;
+    padding: 5px 0px;
+    border-radius: 5px;
+}

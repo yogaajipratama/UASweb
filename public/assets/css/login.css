@@ -1,0 +1,36 @@
+.form-signin .form-floating:focus-within {
+    z-index: 2;
+}
+
+.form-signin input[name="email_user"] {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.form-signin input[name="password"] {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+.eye-container {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+}
+.eye-show,
+.eye-hide {
+    color: grey;
+    position: absolute;
+    cursor: pointer;
+}
+.eye-show:hover,
+.eye-hide:hover {
+    cursor: pointer;
+}
+.hide {
+    display: none;
+}
+.show {
+    display: block;
+}

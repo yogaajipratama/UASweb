@@ -1,0 +1,39 @@
+.form-signin .form-floating:focus-within {
+    z-index: 2;
+}
+
+.input-form {
+    margin-bottom: 4px;
+    border-radius: 0;
+}
+.input-form:focus {
+    z-index: 99;
+}
+
+/* .form-signin input[name="password"] {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+} */
+
+.radio-sex {
+    padding: 0px 15px;
+}
+.radio-wrapper {
+    padding: 10px;
+}
+.radio-wrapper > input {
+    margin-right: 10px;
+}
+.kprodi {
+    border-color: rgb(180, 180, 180);
+    height: calc(3.5rem + 2px);
+    width: 100%;
+    padding: 15px 15px 0px 15px;
+}
+.kprodi:focus {
+    box-shadow: 0 0 4px 4px rgb(194, 219, 254);
+}
+.label-prodi {
+    padding: 0 15px !important;
+}

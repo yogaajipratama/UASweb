@@ -60,7 +60,7 @@
     "dualLang":"Dua bahasa menu statis , Indonesia(ID) dan Inggris(EN)",
     "logSystem":"Menggunakan sistem login dan kredensial lebih dari satu",
     "combineStyle":"Menggunakan style(css) gabungan manual dan bootstrap",
-    "usingJS":"Menggunakan jQuery",
+    "usingJS":"Menggunakan jQuery dan vanila javascript",
     "dashboard":"Dasbor",
     "crud":"CRUD standar",
     "dbOntheFly":"Secara otomatis membuat database dengan cepat tanpa mengimpor atau memigrasikan database.",

@@ -2,7 +2,7 @@
     "home":"Home",
     "students":"Students",
     "student":"Student",
-    "departments":"Department",
+    "departments":"Departments",
     "login":"Login",
     "mainBrag":"Welcome to Web Demo build by <strong>Group 1</strong> in collaboration with <strong>Anggoro-Corp.</strong> This is a web demo build with Laravel 8 Framework. This demo is build to fulfill the <strong>Final Test Semester </strong> of subject <strong>Kelas Perancangan dan Pemrograman WEB (IST 102) A.</strong>",
     "notLog":"You are <span class='notLog'>not login</span> yet, please login or register first.",
@@ -64,9 +64,10 @@
     "dashboard":"Dashboard",
     "crud":"Standard CRUD",
     "dbOntheFly":"Automatically create database on the fly without import or migrate database.",
-    "defaultUsr":"Default username: SuperAdmin",
-    "defaultPwd":"Default password: SuperAdmin",
+    "defaultUsr":"Default username",
+    "defaultPwd":"Default password",
     "userProfile":"User Profile",
     "lecturer":"Lecturer",
-    "webTitle":"Mini Academic Web Demo"
+    "webTitle":"Mini Academic Web Demo",
+    "forbidAdminPage":"The page can only be accessed by Admin"
 }

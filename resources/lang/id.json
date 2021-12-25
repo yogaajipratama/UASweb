@@ -64,9 +64,10 @@
     "dashboard":"Dasbor",
     "crud":"CRUD standar",
     "dbOntheFly":"Secara otomatis membuat database dengan cepat tanpa mengimpor atau memigrasikan database.",
-    "defaultUsr":"Nama pengguna default: SuperAdmin",
-    "defaultPwd":"Kata sandi default: SuperAdmin",
+    "defaultUsr":"Nama pengguna default",
+    "defaultPwd":"Kata sandi default",
     "userProfile":"Profil Pengguna",
     "lecturer":"Dosen",
-    "webTitle":"Web Demo Mini Akademik"
+    "webTitle":"Web Demo Mini Akademik",
+    "forbidAdminPage":"Halaman hanya dapat diakses oleh Admin"
 }

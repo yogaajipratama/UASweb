@@ -36,7 +36,9 @@ class StudentsController extends Controller
      */
     public function show(Students $Student)
     {
-        // echo $Student;
+
+        echo $Student;
+        echo Departments::where('kdprodi', $Student->kdprodi)->get();
     }
 
     /**

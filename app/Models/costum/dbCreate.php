@@ -46,6 +46,7 @@ class dbCreate extends Model
         if (!Schema::hasTable('users')) {
             Schema::create('users', function (Blueprint $table) {
                 $table->integer('user_id', true)->notNull();
+                $table->string('avatar', 255)->nullable();
                 $table->string('username', 20)->unique()->notNull();
                 $table->string('email', 50)->unique()->notNull();
                 //0 = Super Admin, 1 = Admin, 2 = User Dosen, 3= User Mahasiswa
@@ -59,7 +60,7 @@ class dbCreate extends Model
             Schema::create('students', function (Blueprint $table) {
                 $table->integer('student_id', true)->notNull();
                 $table->string('nim', 10)->unique()->notNull();
-                $table->string('avatar', 255)->nullable();
+                $table->string('profile_pic', 255)->nullable();
                 $table->string('name', 100)->notNull();
                 $table->tinyInteger('sex')->notNull();  //0 = Male, 1 = Female, 2 = Other
                 $table->string('email', 50)->unique()->notNull();

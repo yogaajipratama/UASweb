@@ -1,7 +1,7 @@
 <ul class="navbar-nav ms-auto">
     @if(session()->has('user'))
       <div class="avatar d-inline">
-        <img src="{{ session('user')->avatar ?? '/assets/img/default.png' }}" alt="profile picture" width="25" height="25">
+        <img src="{{ session('user')->profile_pic ?? '/assets/img/default.png' }}" alt="profile picture" width="25" height="25">
       </div>
       <li class="nav-item dropdown d-inline">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">

@@ -13,6 +13,14 @@
       <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
     @endif  
+    @if(session()->has('forbidAdminPage'))
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+      {{ session('forbidAdminPage') }}
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    @endif  
+
+    
 
     <h1 class="text-center fw-bold">@lang('webTitle')</h1>
     <p>
@@ -47,10 +55,39 @@
         <li>@lang('crud')</li>
         <li>
             @lang('dbOntheFly')
-            <ul>
-                <li>@lang('defaultUsr')</li> 
-                <li>@lang('defaultPwd')</li> 
-            </ul>
+            <div class="col-lg-6">
+                <table class="table table-hover">
+                    <thead class="table-head">                    
+                        <tr class="head-title">
+                            <th scope="col" class="col-num">No.</th>
+                            <th scope="col">@lang('defaultUsr')</th>
+                            <th scope="col">@lang('defaultPwd')</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="col-num">1</td>
+                            <td>SuperAdmin</td>
+                            <td>SuperAdmin</td>
+                        </tr>
+                        <tr>
+                            <td class="col-num">2</td>
+                            <td>Admin</td>
+                            <td>Admin</td>
+                        </tr>
+                        <tr>
+                            <td class="col-num">3</td>
+                            <td>UserDosen</td>
+                            <td>UserDosen</td>
+                        </tr>
+                        <tr>
+                            <td class="col-num">4</td>
+                            <td>UserMahasiswa</td>
+                            <td>UserMahasiswa</td>
+                        </tr>
+                    </tbody>       
+                </table>            
+            </div>
         </li>
     </ol>
 

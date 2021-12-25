@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Session;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\StudentsController;
+use App\Http\Controllers\DepartmentsController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\auth\LoginController;
 use App\Http\Controllers\auth\RegisterController;
@@ -22,9 +23,6 @@ use App\Http\Controllers\auth\RegisterController;
 |
 */
 
-Route::get('/', function () {
-    return view('Home');
-});
 
 Route::get('/dbCreate', function () {
     $db = new dbCreate();
@@ -42,21 +40,35 @@ Route::get('locale/{locale}', function ($locale) {
     return redirect()->back();
 });
 
+Route::get('/', function () {
+    return view('Home');
+});
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::post('/login', [LoginController::class, 'authenticate']);
 Route::get('/register', [RegisterController::class, 'index']);
 Route::post('/register', [RegisterController::class, 'store']);
 
-
+/**
+ * GROUPING FOR ROUTE PAGE NEEDS LOGIN
+ */
 Route::group(['middleware' => 'MyAuth'], function () {
-    Route::get('/login', [LoginController::class, 'index'])->name('login');
 
-    Route::resource('/Students', StudentsController::class);
-    Route::resource('/Departments', DepartmentsController::class);
-    //     // Logout Routes
+    Route::get('/login', [LoginController::class, 'index'])->name('login');
+    // Logout Routes
     Route::get('/logout', [LoginController::class, 'logout']);
 
+
+    Route::get('/Students', [StudentsController::class, 'index']);
+    Route::get('/Students/{Student}', [StudentsController::class, 'show']);
+    /**
+     * ROUTE FOR ADMIN ROLE
+     */
+    Route::group(['middleware' => 'MyAuthAdmin'], function () {
+        Route::resource('/Students', StudentsController::class)->except('index', 'show');
+    });
+
+    Route::resource('/Departments', DepartmentsController::class);
 
     Route::get('/Dashboard', [DashboardController::class, 'index']);
 });
